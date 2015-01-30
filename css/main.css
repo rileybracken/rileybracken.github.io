@@ -370,9 +370,9 @@ h6 {
   #home .home-coming-soon {
     position: absolute;
     left: 50%;
-    -webkit-transform: translate(-50%, 100%);
-        -ms-transform: translate(-50%, 100%);
-            transform: translate(-50%, 100%);
+    -webkit-transform: translate(-50%, 150%);
+        -ms-transform: translate(-50%, 150%);
+            transform: translate(-50%, 150%);
     width: 100%; } }
 
 @media only screen and (min-width: 320px) { }
