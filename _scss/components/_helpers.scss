@@ -1,0 +1,10 @@
+.upcase { text-transform: uppercase; }
+.text-center { text-align: center; }
+.full-height { position: relative; }
+
+.v-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
