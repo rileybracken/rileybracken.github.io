@@ -367,7 +367,8 @@ h6 {
   #home h2 {
     font-size: 38px; }
   #home h6 {
-    font-size: 14px; }
+    font-size: 14px;
+    opacity: 0.5; }
   #home .home-coming-soon {
     position: absolute;
     left: 50%;

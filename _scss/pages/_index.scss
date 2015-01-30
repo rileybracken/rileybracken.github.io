@@ -1,7 +1,10 @@
 @media only screen {
   #home {
     h2 { font-size: 38px; }
-    h6 { font-size: 14px; }
+    h6 {
+      font-size: 14px;
+      opacity: 0.5;
+    }
 
     .home-coming-soon {
       position: absolute;
