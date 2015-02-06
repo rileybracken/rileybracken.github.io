@@ -1,37 +1,86 @@
-@media only screen {
-  #home {
-    h2 { font-size: 38px; }
-    h6 {
-      font-size: 14px;
-      opacity: 0.5;
-    }
-
-    .home-coming-soon {
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%, 150%);
-      width: 100%;
-    }
-  }
+.pulse-container {
+  margin: 0 auto;
+  height: 400px;
+  width: 400px;
+  position: relative;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
-@media only screen and (min-width:320px) {}
-
-@media only screen and (min-width:480px) {}
-
-@media only screen and (min-width:768px) {
-  #home {
-    .home-coming-soon {
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
+.satellite {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 44%;
+  left: 45%;
+  -webkit-transform: rotate(275deg);
+  -moz-transform: rotate(275deg);
+  -ms-transform: rotate(275deg);
+  -o-transform: rotate(275deg);
+  transform: rotate(275deg);
 }
 
-@media only screen and (min-width:1024px) {}
+.pulse {
+  width: 400px;
+  height: 400px;
+  position: absolute;
 
-@media only screen and (min-width:1140px) {}
+  &.pulse_out_1,
+  &.pulse_out_2,
+  &.pulse_out_3,
+  &.pulse_out_4,
+  &.pulse_out_5,
+  &.pulse_out_6,
+  &.pulse_out_7,
+  &.pulse_out_8 {
+    fill: none;
+    opacity: 0;
+    -webkit-animation: pulseOut 4s linear infinite;
+    animation: pulseOut 4s linear infinite;
+  }
 
-@media only screen and (min-width:1280px) {}
+  .front {
+    stroke-width: 6;
+    stroke-dasharray: 160px 1200px;
+    stroke: #d1dce1;
+    position: relative;
+  }
 
-@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {}
+  .back {
+    stroke: #f1f5f6;
+    stroke-width: 3;
+  }
+
+  &.pulse_out_1 { animation-delay: .5s; }
+  &.pulse_out_2 { animation-delay: 1s; }
+  &.pulse_out_3 { animation-delay: 1.5s; }
+  &.pulse_out_4 { animation-delay: 2s; }
+  &.pulse_out_5 { animation-delay: 2.5s; }
+  &.pulse_out_6 { animation-delay: 3s; }
+  &.pulse_out_7 { animation-delay: 3.5s; }
+  &.pulse_out_8 { animation-delay: 4s; }
+}
+
+@keyframes pulseOut {
+  0% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    opacity: 1;
+  }
+
+  70% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    opacity: 0.7;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+
+  }
+}

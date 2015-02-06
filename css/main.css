@@ -363,35 +363,95 @@ h5 {
 h6 {
   font-size: 18px; }
 
-@media only screen {
-  #home h2 {
-    font-size: 38px; }
-  #home h6 {
-    font-size: 14px;
-    opacity: 0.5; }
-  #home .home-coming-soon {
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translate(-50%, 150%);
-        -ms-transform: translate(-50%, 150%);
-            transform: translate(-50%, 150%);
-    width: 100%; } }
+.pulse-container {
+  margin: 0 auto;
+  height: 400px;
+  width: 400px;
+  position: relative;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg); }
 
-@media only screen and (min-width: 320px) { }
+.satellite {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 44%;
+  left: 45%;
+  -webkit-transform: rotate(275deg);
+  -ms-transform: rotate(275deg);
+  transform: rotate(275deg); }
 
-@media only screen and (min-width: 480px) { }
+.pulse {
+  width: 400px;
+  height: 400px;
+  position: absolute; }
+  .pulse.pulse_out_1, .pulse.pulse_out_2, .pulse.pulse_out_3, .pulse.pulse_out_4, .pulse.pulse_out_5, .pulse.pulse_out_6, .pulse.pulse_out_7, .pulse.pulse_out_8 {
+    fill: none;
+    opacity: 0;
+    -webkit-animation: pulseOut 4s linear infinite;
+    animation: pulseOut 4s linear infinite; }
+  .pulse .front {
+    stroke-width: 6;
+    stroke-dasharray: 160px 1200px;
+    stroke: #d1dce1;
+    position: relative; }
+  .pulse .back {
+    stroke: #f1f5f6;
+    stroke-width: 3; }
+  .pulse.pulse_out_1 {
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s; }
+  .pulse.pulse_out_2 {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s; }
+  .pulse.pulse_out_3 {
+    -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s; }
+  .pulse.pulse_out_4 {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s; }
+  .pulse.pulse_out_5 {
+    -webkit-animation-delay: 2.5s;
+            animation-delay: 2.5s; }
+  .pulse.pulse_out_6 {
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s; }
+  .pulse.pulse_out_7 {
+    -webkit-animation-delay: 3.5s;
+            animation-delay: 3.5s; }
+  .pulse.pulse_out_8 {
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s; }
 
-@media only screen and (min-width: 768px) {
-  #home .home-coming-soon {
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); } }
+@-webkit-keyframes pulseOut {
+  0% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    opacity: 1; }
 
-@media only screen and (min-width: 1024px) { }
+  70% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    opacity: 0.7; }
 
-@media only screen and (min-width: 1140px) { }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0; } }
 
-@media only screen and (min-width: 1280px) { }
+@keyframes pulseOut {
+  0% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    opacity: 1; }
 
-@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) { }
+  70% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    opacity: 0.7; }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0; } }
